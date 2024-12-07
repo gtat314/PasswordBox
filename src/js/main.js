@@ -247,6 +247,15 @@ PasswordBox.prototype.setTitle = function( title ) {
 
 };
 
+/**
+ * 
+ */
+PasswordBox.prototype.focus = function() {
+
+    this._evt_click_parentElem();
+
+};
+
 
 
 
