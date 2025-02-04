@@ -27,6 +27,7 @@
  * @param {HTMLElement|CSSRule}      schema.parent
  * @param {String}                  [schema.title]
  * @param {Boolean}                 [schema.htmlReady]
+ * @param {String}                  [schema.name]
  * @param {String}                  [schema.form]
  * @param {Number}                  [schema.tabindex]
  * @param {SVGElement}              [schema.iconView]
@@ -112,6 +113,12 @@ function PasswordBox( schema ) {
      */
     this._inputId = null;
 
+    /**
+     * @property
+     * @private
+     */
+    this._inputName = null;
+
 
 
 
@@ -120,6 +127,12 @@ function PasswordBox( schema ) {
     if ( schema.hasOwnProperty( 'autofocus' ) ) {
 
         autofocus = schema.autofocus;
+
+    }
+
+    if ( schema.hasOwnProperty( 'name' ) ) {
+
+        this._inputName = schema.name;
 
     }
 
@@ -335,6 +348,12 @@ PasswordBox.prototype._createFromHTML = function() {
     this._inputElem     = this._parentElem.querySelector( 'input' );
     this._iconElem      = this._parentElem.querySelector( '.icon' );
 
+    if ( this._inputElem.hasAttribute( 'name' ) ) {
+
+        this._inputName = this._inputElem.getAttribute( 'name' );
+
+    }
+
 };
 
 /**
@@ -395,6 +414,12 @@ PasswordBox.prototype._createFromSchema = function( schema ) {
     if ( autocomplete === true ) {
 
         this._inputElem.autocomplete = 'on';
+
+    }
+
+    if ( this._inputName !== null ) {
+
+        this._inputElem.setAttribute( 'name', this._inputName );
 
     }
 
