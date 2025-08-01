@@ -1,22 +1,7 @@
-/**
- * 
- * @employSchema
- * @eventListeners
- * @sensibleDefaults
- * @svgSrc
- * @documentation
- * @documentationApi
- * @iconUniformNames
- * @minimizeProperties
- * @objectifyEventListeners
- * @parentElementSelector
- * @distinctEventListeners
- * @propertiesElemUnderscore
- * @propertify
- * @propertyNamingConventions
- * @methodNamingConventions
- * @htmlReadyMethods
- */
+var PasswordBoxIcons = {
+    'view': "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs/><path d='M19.6 2.56L16.26 5.7C14.99 5.27 13.57 5 12 5 4.45 5 0 11.55 0 11.55s1.93 2.95 5.15 5.14l-2.92 2.9 1.42 1.42L21.02 3.98 19.6 2.56zM13.6 8.34a3.99 3.99 0 00-5.27 5.2L6.6 15.26a18.17 18.17 0 01-4.06-3.66C4.03 9.95 7.35 7 12.02 7c.92 0 1.8.12 2.6.32L13.6 8.34zm-2.89 7.43l5.1-5a3.99 3.99 0 01-5.1 5zM24 11.55S19.75 19 12.02 19c-1.38 0-2.67-.3-3.86-.74l1.62-1.58c.71.2 1.46.32 2.24.32 4.79 0 8.1-3.53 9.5-5.36a15.3 15.3 0 00-3.59-2.96l1.5-1.46A16.62 16.62 0 0124 11.55z'/></svg>",
+    'hide': "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs/><path d='M12.02 7c4.75 0 8.06 3.01 9.5 4.64-1.4 1.83-4.71 5.36-9.5 5.36-4.43 0-7.94-3.54-9.48-5.4C4.03 9.94 7.35 7 12 7zm0-2C4.45 5 0 11.55 0 11.55S4.83 19 12.02 19C19.75 19 24 11.55 24 11.55S19.7 5 12.02 5zM12 8a4 4 0 100 8 4 4 0 000-8z'/></svg>"
+};
 
 
 
@@ -90,14 +75,14 @@ function PasswordBox( schema ) {
      * @property
      * @private
      */
-    this._iconViewSrc = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs/><path d='M19.6 2.56L16.26 5.7C14.99 5.27 13.57 5 12 5 4.45 5 0 11.55 0 11.55s1.93 2.95 5.15 5.14l-2.92 2.9 1.42 1.42L21.02 3.98 19.6 2.56zM13.6 8.34a3.99 3.99 0 00-5.27 5.2L6.6 15.26a18.17 18.17 0 01-4.06-3.66C4.03 9.95 7.35 7 12.02 7c.92 0 1.8.12 2.6.32L13.6 8.34zm-2.89 7.43l5.1-5a3.99 3.99 0 01-5.1 5zM24 11.55S19.75 19 12.02 19c-1.38 0-2.67-.3-3.86-.74l1.62-1.58c.71.2 1.46.32 2.24.32 4.79 0 8.1-3.53 9.5-5.36a15.3 15.3 0 00-3.59-2.96l1.5-1.46A16.62 16.62 0 0124 11.55z'/></svg>";
+    this._iconViewSrc = PasswordBoxIcons[ 'view' ];
 
     /**
      * 
      * @property
      * @private
      */
-    this._iconHideSrc = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs/><path d='M12.02 7c4.75 0 8.06 3.01 9.5 4.64-1.4 1.83-4.71 5.36-9.5 5.36-4.43 0-7.94-3.54-9.48-5.4C4.03 9.94 7.35 7 12 7zm0-2C4.45 5 0 11.55 0 11.55S4.83 19 12.02 19C19.75 19 24 11.55 24 11.55S19.7 5 12.02 5zM12 8a4 4 0 100 8 4 4 0 000-8z'/></svg>";
+    this._iconHideSrc = PasswordBoxIcons[ 'hide' ];
 
     /**
      * 
