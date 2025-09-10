@@ -104,6 +104,27 @@ function PasswordBox( schema ) {
      */
     this._inputName = null;
 
+    /**
+     * @property
+     * @private
+     * @type {CallableFunction}
+     */
+    this._handleInputInputElem = this._evt_input_inputElem.bind( this );
+
+    /**
+     * @property
+     * @private
+     * @type {CallableFunction}
+     */
+    this._handleClickIconElem = this._evt_click_iconElem.bind( this );
+
+    /**
+     * @property
+     * @private
+     * @type {CallableFunction}
+     */
+    this._handleClickParentElem = this._evt_click_parentElem.bind( this );
+
 
 
 
@@ -180,10 +201,9 @@ function PasswordBox( schema ) {
 
     }
 
-    this._inputElem.addEventListener( 'input', this._evt_input_inputElem.bind( this ) );
-    this._iconElem.addEventListener( 'click', this._evt_click_iconElem.bind( this ) );
-
-    this._parentElem.addEventListener( 'click', this._evt_click_parentElem.bind( this ) );
+    this._inputElem.addEventListener( 'input', this._handleInputInputElem );
+    this._iconElem.addEventListener( 'click', this._handleClickIconElem );
+    this._parentElem.addEventListener( 'click', this._handleClickParentElem );
 
     if ( autofocus === true ) {
 
