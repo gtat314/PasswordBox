@@ -348,7 +348,7 @@ PasswordBox.prototype._evt_input_inputElem = function( evt ) {
  */
 PasswordBox.prototype._createFromHTML = function() {
 
-    this.titleSpanElem  = this._parentElem.querySelector( '.title' );
+    this.titleSpanElem  = this._parentElem.querySelector( '.titleElem' );
     this._sampElem      = this._parentElem.querySelector( '.errorElem' );
     this._inputElem     = this._parentElem.querySelector( 'input' );
     this._iconElem      = this._parentElem.querySelector( '.icon' );
@@ -387,12 +387,12 @@ PasswordBox.prototype._createFromSchema = function( schema ) {
     var fragment = document.createDocumentFragment();
 
     var titleElem = document.createElement( 'DIV' );
-    titleElem.classList.add( 'upperRow' );
+    titleElem.classList.add( 'title' );
     fragment.appendChild( titleElem );
 
     this.titleSpanElem = document.createElement( 'LABEL' );
-    this.titleSpanElem.classList.add( 'title' );
     this.titleSpanElem.innerHTML = schema.title;
+    this.titleSpanElem.classList.add( 'titleElem' );
     titleElem.appendChild( this.titleSpanElem );
 
     this._sampElem = document.createElement( 'SAMP' );

@@ -37,7 +37,7 @@ password-box.error {
 	background-color: var(--theme-errorBackgroundColor, rgba(255, 0, 0, 0.2));
 }
 
-password-box .upperRow {
+password-box .title {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -46,7 +46,7 @@ password-box .upperRow {
 	gap: 0.5rem;
 }
 
-password-box .upperRow .title {
+password-box .title .titleElem {
 	color: var(--theme-mainFont, rgba(0, 0, 0, 1));
 	opacity: 0.6;
 	overflow: hidden;
@@ -59,7 +59,7 @@ password-box .upperRow .title {
 	line-height: 1.2rem;
 }
 
-password-box .upperRow .errorElem {
+password-box .title .errorElem {
 	color: var(--theme-errorFont, rgba(255, 68, 68, 1));
 	opacity: 0;
 	line-height: 1.2rem;
@@ -67,7 +67,7 @@ password-box .upperRow .errorElem {
 	transition-duration: var(--theme-transitionDuration, 0.15s);
 }
 
-password-box.error .upperRow .errorElem {
+password-box.error .title .errorElem {
 	opacity: 1;
 }
 
